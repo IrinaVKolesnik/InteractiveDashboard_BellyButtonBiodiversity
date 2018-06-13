@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <h1 class="page">BellyButton Biodiversity </h1>
+        <h2 class="page">An interactive dashboard of microbacteria samples of belly buttons</h2>
+      </div>
+    </div>
+    <div class="row plot-row">
+      <div class="col">
+          <div class="dropdown jumbotron">
+            <h4 class="page">SELECT Sample</h4>
+            <select id="selDataset" onchange="optionChanged(this.value)">
+              </select>
+          </div>
+         <div>
+          <table>
+            <tr class="bg-primary" width=70px style=text-align:center>
+              <th><strong>Sample Data</th>
+            </tr>
+            <tr>
+              <td>
+                <div id="metadataSpan"></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-10">
+        <div id="pie_div"></div>
+      </div>
+    </div>
+    <div class="row plot-row">
+      <div>
+        <div id="bubble_div"></div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='plotly.js') }}"></script>
+  
+</body>
+
+</html>
