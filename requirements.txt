@@ -10,6 +10,8 @@ itsdangerous==0.24
 jedi==0.10.2
 Jinja2==2.10
 MarkupSafe==1.0
+numpy==1.13.3
+pandas==0.20.3
 parso==0.1.0
 passlib==1.7.1
 pexpect==4.3.0
@@ -25,5 +27,4 @@ traitlets==4.3.2
 tweepy==3.6.0
 wcwidth==0.1.7
 Werkzeug==0.12.2
-gunicorn==19.7.1
 
